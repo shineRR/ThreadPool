@@ -3,7 +3,7 @@
 namespace ThreadPool.Pool
 {
     public delegate void TaskDelegate();
-    public interface ITaskQueue
+    public interface ITaskQueue : IDisposable
     {
         void EnqueueTask(TaskDelegate task);
     }

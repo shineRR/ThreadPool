@@ -1,43 +1,89 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
 using System.Threading;
 
 namespace ThreadPool.Pool
 {
     public class TaskQueue : ITaskQueue
     {
-        private const int defaultThreadCount = 15;
-        private int _threadCount;
+        private const int DefaultThreadCount = 15;
+        private Queue<TaskDelegate> _taskQueue = new Queue<TaskDelegate>();
         private Thread[] _threadQueue;
+        private Object _queueSync = new object();
+        private bool _isActive = true;
 
         public TaskQueue()
         {
-            _threadCount = defaultThreadCount;
-            _threadQueue = new Thread[_threadCount];
+            _threadQueue = new Thread[DefaultThreadCount];
         }
 
         public TaskQueue(int threadCount)
         {
-            _threadCount = threadCount;
             _threadQueue = new Thread[threadCount];
+            for (int i = 0; i < _threadQueue.Length; i++)
+            {
+                _threadQueue[i] = new Thread(new ThreadStart(taskSelectionQueue));
+                _threadQueue[i].Name = "Thread #" + i;
+                _threadQueue[i].Start();
+            }
         }
-        private static void ThreadProc()
-        {
-            Console.WriteLine("\nCurrent thread: {0}", Thread.CurrentThread.Name);
 
-            Thread.Sleep(4000);
-            Console.WriteLine("\nCurrent thread: {0}", Thread.CurrentThread.Name);
+        private void taskSelectionQueue()
+        {
+            while (_isActive)
+            {
+                TaskDelegate taskDelegate = null;
+                bool taskReady = false;
+                
+                lock (_queueSync)
+                {
+                    if (_taskQueue.Count == 0)
+                    {
+                        // Console.WriteLine(Thread.CurrentThread.Name + " is waiting for task.");
+                        Monitor.Wait(_queueSync);
+                    }
+                    else
+                    {
+                        taskReady = true;
+                        taskDelegate = _taskQueue.Dequeue();
+                        Monitor.Pulse(_queueSync);
+                    }
+                }
+                if (taskReady)
+                {
+                    Console.WriteLine(Thread.CurrentThread.Name + " started executing task");
+                    taskDelegate();
+                }
+            }
+            Console.WriteLine("Kill " + Thread.CurrentThread.Name);
         }
         
         public void EnqueueTask(TaskDelegate task)
         {
-             _threadQueue[0] = new Thread(new ThreadStart(ThreadProc));
-             _threadQueue[0].Start();
-             _threadQueue[0].Join();
-            for (int i = 1; i < _threadCount; i++)
+            lock (_queueSync)
             {
-                _threadQueue[i] = new Thread(new ThreadStart(ThreadProc));
-                _threadQueue[i].Name = i.ToString();
-                _threadQueue[i].Start();
+                _taskQueue.Enqueue(task);
+                Monitor.Pulse(_queueSync);
+            }
+        }
+
+        public void Dispose()
+        {
+            while (true)
+            {
+                Thread.Sleep(200);
+                lock (_queueSync)
+                {
+                    if (_taskQueue.Count == 0) break;
+                }
+            }
+            
+            lock (_queueSync)
+            {
+                _isActive = false;
+                Monitor.PulseAll(_queueSync);
             }
         }
     }

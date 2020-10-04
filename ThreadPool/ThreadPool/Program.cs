@@ -1,21 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
 using ThreadPool.Pool;
 
 namespace ThreadPool
 {
     internal class Program
     {
+        static TaskQueue taskQueue = new TaskQueue(3);
+
         public static void Main(string[] args)
         {
-            TaskQueue taskQueue = new TaskQueue(5);
-            
-            taskQueue.EnqueueTask(delegate
-            {
-                for (int i = 0; i < 1000000; i++)
-                {
-                    Console.WriteLine(i);
-                }
-            });
+            taskQueue.Dispose();
         }
     }
 }
