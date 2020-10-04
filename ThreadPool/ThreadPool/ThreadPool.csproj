@@ -39,6 +39,8 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="FilleService\FileCopyService.cs" />
+        <Compile Include="FilleService\IFileCopyService.cs" />
         <Compile Include="Pool\ITaskQueue.cs" />
         <Compile Include="Pool\TaskQueue.cs" />
         <Compile Include="Program.cs" />

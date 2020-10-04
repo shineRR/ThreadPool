@@ -10,8 +10,8 @@ namespace ThreadPool.Pool
     {
         private const int DefaultThreadCount = 15;
         private Queue<TaskDelegate> _taskQueue = new Queue<TaskDelegate>();
-        private Thread[] _threadQueue;
-        private Object _queueSync = new object();
+        public Thread[] _threadQueue;
+        private readonly Object _queueSync = new object();
         private bool _isActive = true;
 
         public TaskQueue()
@@ -41,7 +41,6 @@ namespace ThreadPool.Pool
                 {
                     if (_taskQueue.Count == 0)
                     {
-                        // Console.WriteLine(Thread.CurrentThread.Name + " is waiting for task.");
                         Monitor.Wait(_queueSync);
                     }
                     else
@@ -52,12 +51,8 @@ namespace ThreadPool.Pool
                     }
                 }
                 if (taskReady)
-                {
-                    Console.WriteLine(Thread.CurrentThread.Name + " started executing task");
                     taskDelegate();
-                }
             }
-            Console.WriteLine("Kill " + Thread.CurrentThread.Name);
         }
         
         public void EnqueueTask(TaskDelegate task)

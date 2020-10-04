@@ -22,14 +22,21 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:develop" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de0cd920-2cb3-4b52-b2bf-fffbdb62c8d5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ThreadPool/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThreadPool/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ThreadPool/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThreadPool/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThreadPool/Pool/ITaskQueue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThreadPool/Pool/ITaskQueue.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ThreadPool/Pool/TaskQueue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThreadPool/Pool/TaskQueue.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ThreadPool/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThreadPool/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThreadPool/ThreadPool.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ThreadPool/ThreadPool.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,18 +47,26 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/ThreadPool/FilleService/FileCopyService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ThreadPool/FilleService/IFileCopyService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8788DF23-D12C-4548-A89D-2A54A21132B9/29/cfcee517/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/50FE65A4-93A0-4952-84F1-E3562EFBE38D/25/c1cdc1df/Thread.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/50FE65A4-93A0-4952-84F1-E3562EFBE38D/2b/e2c5ca59/IDisposable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/50FE65A4-93A0-4952-84F1-E3562EFBE38D/8d/3516e392/Boolean.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/50FE65A4-93A0-4952-84F1-E3562EFBE38D/be/88dd2676/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5DE66FF1-1FCB-4513-8463-255B392B032B/84/fca9c706/Queue`1.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/ThreadPool/Pool/ITaskQueue.cs" />
-        <option value="$PROJECT_DIR$/ThreadPool/Program.cs" />
+        <option value="$PROJECT_DIR$/ThreadPool/FilleService/IClassCopyService.cs" />
+        <option value="$PROJECT_DIR$/ThreadPool/FileService/IFileCopyService.cs" />
+        <option value="$PROJECT_DIR$/ThreadPool/FileService/FileCopyService.cs" />
+        <option value="$PROJECT_DIR$/ThreadPool/FilleService/IFileCopyService.cs" />
+        <option value="$PROJECT_DIR$/ThreadPool/FilleService/FileCopyService.cs" />
         <option value="$PROJECT_DIR$/ThreadPool/Pool/TaskQueue.cs" />
+        <option value="$PROJECT_DIR$/ThreadPool/Program.cs" />
       </list>
     </option>
   </component>
@@ -105,7 +120,7 @@
       <workItem from="1601739032729" duration="9106000" />
       <workItem from="1601762642523" duration="1310000" />
       <workItem from="1601765980898" duration="3485000" />
-      <workItem from="1601802184163" duration="3714000" />
+      <workItem from="1601802184163" duration="18517000" />
     </task>
     <servers />
   </component>
@@ -119,7 +134,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="develop" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -130,33 +157,33 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="5" key="GridCell.Tab.0.bottom" timestamp="1601807330799">
+    <state width="1877" height="50" key="GridCell.Tab.0.bottom" timestamp="1601824322431">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="5" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601807330799" />
-    <state width="1877" height="5" key="GridCell.Tab.0.center" timestamp="1601807330799">
+    <state width="1877" height="50" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601824322431" />
+    <state width="1877" height="50" key="GridCell.Tab.0.center" timestamp="1601824322431">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="5" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601807330799" />
-    <state width="1877" height="5" key="GridCell.Tab.0.left" timestamp="1601807330799">
+    <state width="1877" height="50" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601824322431" />
+    <state width="1877" height="50" key="GridCell.Tab.0.left" timestamp="1601824322431">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="5" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601807330799" />
-    <state width="1877" height="5" key="GridCell.Tab.0.right" timestamp="1601807330799">
+    <state width="1877" height="50" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601824322431" />
+    <state width="1877" height="50" key="GridCell.Tab.0.right" timestamp="1601824322431">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="5" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601807330799" />
-    <state x="832" y="217" key="RiderGenerateDialog" timestamp="1601742301055">
+    <state width="1877" height="50" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601824322431" />
+    <state x="832" y="217" key="RiderGenerateDialog" timestamp="1601821230495">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="832" y="217" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601742301055" />
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1601769395182">
+    <state x="832" y="217" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601821230495" />
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1601819909662">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601769395182" />
-    <state x="755" y="208" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601671131813">
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601819909662" />
+    <state x="755" y="208" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601816496021">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="755" y="208" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1601671131813" />
+    <state x="755" y="208" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1601816496021" />
   </component>
 </project>
