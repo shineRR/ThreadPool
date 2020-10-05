@@ -96,7 +96,7 @@ namespace ThreadPool.FileService
                 
             }
             _taskQueue.Dispose();
-            PrintCopiedFiles(ref _taskQueue._threadQueue);
+            PrintCopiedFiles(ref _taskQueue.ThreadQueue);
         }
     }
 }

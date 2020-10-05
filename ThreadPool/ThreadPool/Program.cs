@@ -15,11 +15,13 @@ namespace ThreadPool
                 Console.WriteLine("Not enough arguments.");
                 return;
             }
+            string src = args[0];
+            string dest = args[1];
             
-            if (!Directory.Exists(args[0])) return;
-            
+            if (!Directory.Exists(src) || !Directory.Exists(Directory.GetDirectoryRoot(dest)) || 
+                src == dest) return;
             FileCopyService fileCopyService = new FileCopyService( new TaskQueue(100));
-            fileCopyService.StartCopying(Path.GetFullPath(args[0]), Path.GetFullPath(args[1]));
+            fileCopyService.StartCopying(Path.GetFullPath(src), Path.GetFullPath(dest));
         }
     }
 }
