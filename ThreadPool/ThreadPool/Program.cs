@@ -10,17 +10,20 @@ namespace ThreadPool
     {
         public static void Main(string[] args)
         {
-            if (args.Count() < 2)
+            if (args.Count() != 3)
             {
                 Console.WriteLine("Not enough arguments.");
                 return;
             }
             string src = args[0];
             string dest = args[1];
-            
-            if (!Directory.Exists(src) || !Directory.Exists(Directory.GetDirectoryRoot(dest)) || 
-                src == dest) return;
-            FileCopyService fileCopyService = new FileCopyService( new TaskQueue(100));
+            int threads = 0;
+            int.TryParse(args[2], out threads);
+          
+            if ((!Directory.Exists(src) || !Directory.Exists(Directory.GetDirectoryRoot(dest)) || 
+                src == dest) || threads < 1) return;
+            Console.WriteLine(threads);
+            FileCopyService fileCopyService = new FileCopyService(new TaskQueue(threads));
             fileCopyService.StartCopying(Path.GetFullPath(src), Path.GetFullPath(dest));
         }
     }
