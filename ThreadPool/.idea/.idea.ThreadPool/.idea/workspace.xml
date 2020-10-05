@@ -32,11 +32,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de0cd920-2cb3-4b52-b2bf-fffbdb62c8d5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ThreadPool/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThreadPool/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ThreadPool/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThreadPool/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThreadPool/FilleService/FileCopyService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThreadPool/FilleService/FileCopyService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ThreadPool/Pool/TaskQueue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThreadPool/Pool/TaskQueue.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ThreadPool/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThreadPool/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThreadPool/ThreadPool.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ThreadPool/ThreadPool.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +48,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/ThreadPool/FilleService/FileCopyService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ThreadPool/FilleService/IFileCopyService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/50FE65A4-93A0-4952-84F1-E3562EFBE38D/31/5519ca49/Directory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8788DF23-D12C-4548-A89D-2A54A21132B9/29/cfcee517/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/50FE65A4-93A0-4952-84F1-E3562EFBE38D/25/c1cdc1df/Thread.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/50FE65A4-93A0-4952-84F1-E3562EFBE38D/2b/e2c5ca59/IDisposable.cs" root0="SKIP_HIGHLIGHTING" />
@@ -121,6 +121,9 @@
       <workItem from="1601762642523" duration="1310000" />
       <workItem from="1601765980898" duration="3485000" />
       <workItem from="1601802184163" duration="18517000" />
+      <workItem from="1601824834948" duration="29000" />
+      <workItem from="1601844931476" duration="1771000" />
+      <workItem from="1601855642417" duration="1123000" />
     </task>
     <servers />
   </component>

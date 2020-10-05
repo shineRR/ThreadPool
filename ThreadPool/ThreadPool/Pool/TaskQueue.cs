@@ -10,23 +10,23 @@ namespace ThreadPool.Pool
     {
         private const int DefaultThreadCount = 15;
         private Queue<TaskDelegate> _taskQueue = new Queue<TaskDelegate>();
-        public Thread[] _threadQueue;
+        public Thread[] ThreadQueue;
         private readonly Object _queueSync = new object();
         private bool _isActive = true;
 
         public TaskQueue()
         {
-            _threadQueue = new Thread[DefaultThreadCount];
+            ThreadQueue = new Thread[DefaultThreadCount];
         }
 
         public TaskQueue(int threadCount)
         {
-            _threadQueue = new Thread[threadCount];
-            for (int i = 0; i < _threadQueue.Length; i++)
+            ThreadQueue = new Thread[threadCount];
+            for (int i = 0; i < ThreadQueue.Length; i++)
             {
-                _threadQueue[i] = new Thread(new ThreadStart(taskSelectionQueue));
-                _threadQueue[i].Name = "Thread #" + i;
-                _threadQueue[i].Start();
+                ThreadQueue[i] = new Thread(new ThreadStart(taskSelectionQueue));
+                ThreadQueue[i].Name = "Thread #" + i;
+                ThreadQueue[i].Start();
             }
         }
 
